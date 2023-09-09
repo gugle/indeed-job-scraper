@@ -6,20 +6,19 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
 
+#######################################################
+# This code uses ScrapeOps proxy service
+# Get a Free Account at https://scrapeops.io/
+# Replace empty string with your own ScrapeOps API KEY
+#######################################################
+
+API_KEY = ''
 
 def proxy_request(url):
     response = requests.get(
-        #######################################################
-        # This code uses ScrapeOps proxy service
-        # Get a Free Account at https://scrapeops.io/
-        # And get an api key
-        #######################################################
         url='https://proxy.scrapeops.io/v1/',
         params={
-            #######################################################
-            # Replace empty string with your own ScrapeOps API KEY
-            #######################################################
-            'api_key': '',
+            'api_key': API_KEY,
             'url': url,
             'country': 'mx',
         },
