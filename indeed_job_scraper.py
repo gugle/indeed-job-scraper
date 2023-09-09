@@ -7,6 +7,18 @@ import pandas as pd
 from datetime import datetime
 
 #######################################################
+# Write custom values to queries variable
+# key_words = ["profesor", "pedagogía", "..."]
+#######################################################
+key_words = ["moodle", "blackboard", "brightspace", "canvas", "sakai lms", "google classroom"]
+
+#######################################################
+# Write custom values to find jobs near your location
+# job_location = "Ciudad de México"
+#######################################################
+job_location = "Ciudad de México"
+
+#######################################################
 # This code uses ScrapeOps proxy service
 # Get a Free Account at https://scrapeops.io/
 # Replace empty string with your own ScrapeOps API KEY
@@ -75,16 +87,8 @@ def get_indeed_jobs(query, location):
 
 if __name__ == "__main__":
 
-    #######################################################
-    # Write custom values to queries variable
-    # queries = ["profesor", "pedagogía", "..."]
-    #######################################################
-    queries = ["moodle", "blackboard", "brightspace", "canvas", "sakai lms", "google classroom"]
-    #######################################################
-    # Write custom values to find jobs near your location
-    # location = "Ciudad de México"
-    #######################################################
-    location = "Ciudad de México"
+    queries = key_words
+    location = job_location
 
     results = []
     for query in queries:
